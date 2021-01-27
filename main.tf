@@ -4,15 +4,15 @@ terraform {
       version = "2.33.0"
       source = "hashicorp/aws"
     }
+    random = {
+      version = "2.2"
+      source = "hashicorp/aws"
+    }
   }
 }
 
 provider "aws" {
   region = var.aws_region
-}
-
-provider "random" {
-  version = "2.2"
 }
 
 resource "random_pet" "table_name" {}
