@@ -18,7 +18,7 @@ provider "aws" {
 
 
 module "website_s3_bucket" {
-  source = "binh-le-thanh-mox/tfc-test-1/vpc"
+  source = "github.com/binh-le-thanh-mox/tfc-test-1/vpc"
 
   bucket_name = "tfc-test-bucket"
 
