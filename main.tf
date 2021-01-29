@@ -15,6 +15,19 @@ provider "aws" {
   region = var.aws_region
 }
 
+
+
+module "website_s3_bucket" {
+  source = "binh-le-thanh-mox/tfc-test-1/vpc"
+
+  bucket_name = "tfc-test-bucket"
+
+  tags = {
+    Terraform   = "true"
+    Environment = "dev"
+  }
+}
+
 resource "random_pet" "table_name" {}
 
 resource "aws_dynamodb_table" "tfc_example_table" {
