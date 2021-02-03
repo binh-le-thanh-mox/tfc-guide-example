@@ -15,10 +15,8 @@ provider "aws" {
   region = var.aws_region
 }
 
-
-
 module "website_s3_bucket" {
-  source = "github.com/binh-le-thanh-mox/tfc-test-1/vpc"
+  source = "git@github.com/binh-le-thanh-mox/tfc-test-1/vpc"
 
   bucket_name = "binhmox-tfc-test-bucket"
 
